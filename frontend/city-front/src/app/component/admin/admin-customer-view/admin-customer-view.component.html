@@ -1,0 +1,39 @@
+<div class="bootstrap-wrapper mt20">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 mb20" *ngFor="let p of customer">
+
+                <mat-card>
+
+
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image">
+
+                        </div>
+                        <mat-card-title>
+                            {{p.username}}
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            {{p.firstName}} {{ p.lastName}}
+                        </mat-card-subtitle>
+                        <mat-card-content>
+                            email: {{p.email}}
+                            wallet: {{p.wallet}}
+                        </mat-card-content>
+
+                        <mat-card-actions>
+                            <button mat-raised-button color="accent" class="ml20" (click)="deleteCustomer(p)">
+                                Delete
+                            </button>
+                        </mat-card-actions>
+                    </mat-card-header>
+
+                </mat-card>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

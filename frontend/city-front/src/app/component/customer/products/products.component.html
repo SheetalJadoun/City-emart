@@ -1,0 +1,48 @@
+<div class="bootstrap-wrapper mt20">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 mb20" *ngFor="let p of product">
+
+                <mat-card>
+
+
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image">
+
+                        </div>
+                        <mat-card-title>
+                            {{p.name}}
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            {{p.price}}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+
+                    <mat-card-content>
+                        <p>{{p.description}}</p>
+                    </mat-card-content>
+
+                    <mat-card-actions>
+
+                        <button mat-stroked-button color="accent" class="ml20">
+                            Price {{p.price}}
+                        </button>
+
+                        <button mat-raised-button color="accent" class="ml20" (click)="buyItem(p)">
+                            Buy
+                        </button>
+
+                        <button mat-stroked-button color="accent" class="ml20">
+                            Qty {{p.qty}}
+                        </button>
+                    </mat-card-actions>
+
+                </mat-card>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

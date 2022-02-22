@@ -1,0 +1,97 @@
+<!-- <mat-card class="mt20 mr20 ml10" *ngFor="let p of product">
+
+
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image">
+
+        </div>
+        <mat-card-title>
+            {{p.name}}
+        </mat-card-title>
+        <mat-card-subtitle>
+            {{p.price}}
+        </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        <p>{{p.description}}</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-flat-button color="primary">
+            UPDATE
+        </button>
+        <button mat-stroked-button color="primary" class="ml20">
+            Price {{p.price}}
+        </button>
+        <button mat-stroked-button color="primary" class="ml20">
+            Qty {{p.qty}}
+        </button>
+    </mat-card-actions>
+
+</mat-card>
+
+<div class="container text-center mt20 mb20">
+    <button mat-raised-button color="primary">
+        Add Product
+    </button>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+<div class="bootstrap-wrapper mt20">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let p of product">
+
+                <mat-card>
+
+
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image">
+
+                        </div>
+                        <mat-card-title>
+                            {{p.name}}
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            {{p.price}}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+
+                    <mat-card-content>
+                        <p>{{p.description}}</p>
+                    </mat-card-content>
+
+                    <mat-card-actions>
+                        <button mat-flat-button color="accent">
+                            UPDATE
+                        </button>
+                        <button mat-stroked-button color="accent" class="ml20">
+                            Price {{p.price}}
+                        </button>
+                        <button mat-stroked-button color="accent" class="ml20">
+                            Qty {{p.qty}}
+                        </button>
+                    </mat-card-actions>
+
+                </mat-card>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container text-center mt20 mb20">
+    <button mat-raised-button color="accent">
+        Add Product
+    </button>
+</div>

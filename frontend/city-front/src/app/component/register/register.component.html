@@ -1,0 +1,127 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <!-- <div class="row"> -->
+        <!-- right se 6 grid chd dega and left se 3 grid by using offset -->
+        <div class="col-md-6 offset-md-3">
+            <mat-card class="mt20">
+                <!-- <div class="container text-center">
+                        <img class="logo" src="../../../assets/logo1.jpg" alt="">
+                    </div> -->
+                <h1 class="text-center">Register Here</h1>
+                <form name="Registerform" #Registerform="ngForm" (ngSubmit)="formSubmit()">
+                    <!-- created an event -->
+
+
+                    <!-- username -->
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label for="usern">User Name</mat-label>
+
+                        <input [(ngModel)]="user.username" name="username" matInput placeholder="Username" required
+                            #usern="ngModel" [class.is-invalid]="usern.invalid && usern.touched">
+                        <small class="text-danger" [class.d-none]="usern.valid || usern.untouched">User name is
+                            required
+                            field</small>
+                    </mat-form-field>
+
+                    <!-- email -->
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input type="email" [(ngModel)]="user.email" name='email' matInput placeholder="Enter here"
+                            required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" #email="ngModel"
+                            [class.is-invalid]="email.invalid && email.touched">
+                        <div *ngIf="email.errors && (email.invalid && email.touched)">
+                            <small class="text-danger" *ngIf="email.errors.pattern">Enter the valid valid email
+                                id</small>
+                        </div>
+                    </mat-form-field>
+
+                    <!-- password -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>password</mat-label>
+                        <input [(ngModel)]="user.password" name="password" type="password" matInput
+                            placeholder="Enter here" required>
+                    </mat-form-field>
+
+
+
+
+
+                    <!-- first name -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>First name</mat-label>
+                        <input [(ngModel)]="user.firstName" name="firstname" matInput placeholder="Enter here" required
+                            #fname="ngModel" [class.is-invalid]="fname.invalid && fname.touched">
+                        <small class="text-danger" [class.d-none]="fname.valid || fname.untouched">User name is
+                            required
+                            field</small>
+                    </mat-form-field>
+
+
+                    <!-- lastname -->
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>last name</mat-label>
+                        <input [(ngModel)]="user.lastName" name="lastName" matInput placeholder="Enter here" required
+                            #lname="ngModel" [class.is-invalid]="lname.invalid && lname.touched">
+                        <small class="text-danger" [class.d-none]="lname.valid || lname.untouched">User name is
+                            required
+                            field</small>
+                    </mat-form-field>
+
+
+
+                    <!-- phone number -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>phone number</mat-label>
+                        <input [(ngModel)]="user.phone" name="phoneNumber" matInput placeholder="Enter here" required
+                            pattern="^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" #ph="ngModel"
+                            [class.is-invalid]="ph.invalid && ph.touched">
+                        <!-- <small class="text-danger" [class.d-none]="ph.valid || ph.untouched">User name is
+                            required
+                            field</small> -->
+                        <div *ngIf="ph.errors && (ph.invalid && ph.touched)">
+                            <small class="text-danger" *ngIf="ph.errors.pattern">Enter the valid phone
+                                number</small>
+                        </div>
+                    </mat-form-field>
+
+                    <!-- walletAmt -->
+
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Wallet Amount</mat-label>
+                        <input [(ngModel)]="user.wallet" name="wallet" matInput placeholder="Enter Intial Wallet Amount"
+                            required #wall="ngModel" [class.is-invalid]="wall.invalid && wall.touched">
+                        <small class="text-danger" [class.d-none]="wall.valid || wall.untouched">Please Enter
+                            Initial
+                            Wallet Amount
+                            field</small>
+                    </mat-form-field>
+
+                    <div>
+                        <input type="radio" name="role" value="Admin" disabled>Admin
+                        <input type="radio" value="Customer" (change)="radioChangedHandler($event)" name="role"
+                            [(ngModel)]="user.role" checked>Customer
+                    </div>
+
+
+
+
+
+                    <div class="container text-center">
+                        <button [disabled]=" Registerform.form.invalid" tye="submit" mat-raised-button
+                            color="primary">Register</button>
+                        <button style="margin-left:20px;" mat-raised-button color="accent"> Clear</button>
+                    </div>
+                    <div class="container text-center mt20">
+                        <p>Already having an account ?<a class="ml10" style="font-weight:bold" routerLink="/login">
+                                Login here</a></p>
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+        <!-- </div> -->
+    </div>
+</div>

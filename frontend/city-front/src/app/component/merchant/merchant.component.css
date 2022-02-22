@@ -1,0 +1,164 @@
+.about .content h3 {
+	font-weight: 600;
+	font-size: 26px;
+  }
+  .about .content ul {
+	list-style: none;
+	padding: 0;
+  }
+  .about .content ul li {
+	padding-left: 28px;
+	position: relative;
+  }
+  .about .content ul li + li {
+	margin-top: 10px;
+  }
+  .about .content ul i {
+	position: absolute;
+	left: 0;
+	top: 2px;
+	font-size: 20px;
+	color: #47b2e4;
+	line-height: 1;
+  }
+  .about .content p:last-child {
+	margin-bottom: 0;
+  }
+  .about .content .btn-learn-more {
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	letter-spacing: 1px;
+	display: inline-block;
+	padding: 12px 32px;
+	border-radius: 4px;
+	transition: 0.3s;
+	line-height: 1;
+	color: #47b2e4;
+	-webkit-animation-delay: 0.8s;
+	animation-delay: 0.8s;
+	margin-top: 6px;
+	border: 2px solid #47b2e4;
+  }
+  .about .content .btn-learn-more:hover {
+	background: #47b2e4;
+	color: #fff;
+	text-decoration: none;
+  }
+  
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+	width: 1170px;
+	margin: auto;
+}
+/* url(https://i.postimg.cc/YjcJg24M/aa.jpg); */
+header {
+	background: linear-gradient(rgba(0,0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../../../assets/mchnt-3.jpg);
+	height: 100vh;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+.nav-area {
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+.nav-area li {
+	display: inline-block;
+}
+.nav-area li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: poppins;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.nav-area li a:hover {
+	background: #fff;
+	color: #333;
+}
+.logo {
+	float: left;
+}
+.logo img {
+	width: 100%;
+	padding: 15px 0;
+}
+.welcome-text {
+	position: absolute;
+	width: 600px;
+	height: 300px;
+	margin: 20% 30%;
+	text-align: center;
+}
+.welcome-text h1 {
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 40px;
+}
+.welcome-text h1 span {
+	color: #00fecb;
+}
+.welcome-text a {
+	border: 1px solid #fff;
+	padding: 10px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 20px;
+	display: inline-block;
+	color: #fff;
+	padding-left: 20px;
+}
+.welcome-text a:hover {
+	background: #fff;
+	color: #333;
+}
+/*resposive*/
+
+@media (max-width:600px) {
+	.wrapper {
+		width: 100%;
+	}
+	.logo {
+		float: none;
+		width: 50%;
+		text-align: center;
+		margin: auto;
+	}
+	/* img {
+		width: ;
+	} */
+	.nav-area {
+		float: none;
+		margin-top: 0;
+	}
+	.nav-area li a {
+		padding: 5px;
+		font-size: 11px;
+	}
+	.nav-area {
+		text-align: center;
+	}
+	.welcome-text {
+		width: 100%;
+		height: auto;
+		margin: 30% 0;
+	}
+	.welcome-text h1 {
+		font-size: 30px;
+	}
+	
+	
+}

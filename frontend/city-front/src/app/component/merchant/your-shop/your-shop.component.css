@@ -1,0 +1,11 @@
+.example-header-image{
+    background-image: url(../../../../assets/profile.png);
+    background-size: cover;
+
+}
+.shop-name{
+    color: rgb(252, 102, 134);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size:xx-large;
+}

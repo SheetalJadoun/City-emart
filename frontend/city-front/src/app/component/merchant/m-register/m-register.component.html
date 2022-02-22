@@ -1,0 +1,136 @@
+<!-- <mat-toolbar color="accent">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>add_business</mat-icon>
+    </button>
+    <span class="ml20">City E-Mart</span>
+    <span class="example-spacer"></span>
+    <a routerLink="/" mat-icon-button class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon">
+        <mat-icon>home</mat-icon>
+    </a>
+
+    <a routerLink="/login" mat-icon-button class="example-icon favorite-icon  ml20"
+        aria-label="Example icon-button with heart icon">
+        Login
+    </a>
+
+    <a routerLink="/register" mat-icon-button class="example-icon favorite-icon  ml20 mr20"
+        aria-label="Example icon-button with heart icon">
+        Register
+    </a>
+
+
+    <a routerLink="/merchant" mat-icon-button class="example-icon favorite-icon ml20 mr20"
+        aria-label="Example icon-button with heart icon">
+        Merchant
+    </a>
+
+
+</mat-toolbar> -->
+
+
+
+
+
+
+
+
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <!-- <div class="row"> -->
+        <!-- right se 6 grid chd dega and left se 3 grid by using offset -->
+        <div class="col-md-4 offset-md-4">
+            <mat-card class="card">
+                <mat-card-title class="ml20">Welcome to City E-mart</mat-card-title>
+                <span>
+
+                    <h3 style="color: gray;" class="ml20">
+                        Create your account to start selling
+                    </h3>
+                </span>
+
+                <form name="MerchantRegform" #MerchantRegform="ngForm" (ngSubmit)="formSubmit()" class="ml20">
+
+
+                    <!-- email -->
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input type="email" [(ngModel)]="mer.email" name='email' matInput placeholder="Enter here"
+                            required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" #email="ngModel"
+                            [class.is-invalid]="email.invalid && email.touched">
+                        <div *ngIf="email.errors && (email.invalid && email.touched)">
+                            <small class="text-danger" *ngIf="email.errors.pattern">Enter the valid valid email
+                                id</small>
+                        </div>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Merchant Name</mat-label>
+                        <input [(ngModel)]="mer.merchant" name="merchant" matInput placeholder="Enter here" required>
+                    </mat-form-field>
+
+
+
+                    <!-- password -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>password</mat-label>
+                        <input [(ngModel)]="mer.password" name="password" type="password" matInput
+                            placeholder="Enter here" required>
+                    </mat-form-field>
+
+                    <!-- shopname -->
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Shop Name</mat-label>
+                        <input [(ngModel)]="mer.shop" name="shop" matInput placeholder="Enter here" required
+                            #shop_name="ngModel">
+                    </mat-form-field>
+
+
+                    <!-- phone number -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>phone number</mat-label>
+                        <input [(ngModel)]="mer.phone" name="phoneNumber" matInput placeholder="Enter here" required
+                            pattern="^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" #ph="ngModel"
+                            [class.is-invalid]="ph.invalid && ph.touched">
+                        <!-- <small class="text-danger" [class.d-none]="ph.valid || ph.untouched">User name is
+                            required
+                            field</small> -->
+                        <div *ngIf="ph.errors && (ph.invalid && ph.touched)">
+                            <small class="text-danger" *ngIf="ph.errors.pattern">Enter the valid phone
+                                number</small>
+                        </div>
+                    </mat-form-field>
+
+
+                    <!-- walletAmt -->
+
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Wallet Amount</mat-label>
+                        <input [(ngModel)]="mer.wallet" name="wallet" matInput placeholder="Enter Intial Wallet Amount"
+                            required #wall="ngModel" [class.is-invalid]="wall.invalid && wall.touched">
+                        <small class="text-danger" [class.d-none]="wall.valid || wall.untouched">Please Enter
+                            Initial
+                            Wallet Amount
+                            field</small>
+                    </mat-form-field>
+
+
+                    <div class="container text-center">
+                        <button mat-raised-button color="primary" type="submit"
+                            [disabled]=" MerchantRegform.form.invalid">Register</button>
+                        <button style="margin-left:20px;" mat-raised-button color="accent"> Clear</button>
+                    </div>
+                    <div class="container text-center mt20">
+                        <p>Already having an account ?<a class="ml10" style="font-weight:bold"
+                                routerLink="/merchant/login"> Login here</a></p>
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+        <!-- </div> -->
+    </div>
+</div>

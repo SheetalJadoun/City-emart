@@ -1,0 +1,104 @@
+<mat-toolbar color="accent">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>add_business</mat-icon>
+    </button>
+    <span class="ml20">City E-Mart</span>
+    <span class="example-spacer"></span>
+    <a routerLink="/" mat-icon-button class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon">
+        <mat-icon>home</mat-icon>
+    </a>
+
+    <a routerLink="/login" mat-icon-button class="example-icon favorite-icon  ml20"
+        aria-label="Example icon-button with heart icon">
+        Login
+    </a>
+
+    <a routerLink="/register" mat-icon-button class="example-icon favorite-icon  ml20 mr20"
+        aria-label="Example icon-button with heart icon">
+        Register
+    </a>
+
+
+    <a routerLink="/merchant" mat-icon-button class="example-icon favorite-icon ml20 mr20"
+        aria-label="Example icon-button with heart icon">
+        Merchant
+    </a>
+
+
+</mat-toolbar>
+
+
+
+
+
+
+
+
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <!-- <div class="row"> -->
+        <!-- right se 6 grid chd dega and left se 3 grid by using offset -->
+        <div class="col-md-4 offset-md-4">
+            <mat-card class="card">
+                <mat-card-title class="ml20">Login to your supplier panel
+                </mat-card-title>
+                <form name="MLoginform" #MLoginform="ngForm" (ngSubmit)="formSubmit()" class="mt20">
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label for="usern">Shop Name</mat-label>
+
+                        <input [(ngModel)]="merchant.shop" name="shop" matInput placeholder="Shop name" required
+                            #usern="ngModel" [class.is-invalid]="usern.invalid && usern.touched">
+                        <small class="text-danger" [class.d-none]="usern.valid || usern.untouched">Shop name is
+                            required
+                            field</small>
+                    </mat-form-field>
+
+                    <!-- email -->
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input type="email" [(ngModel)]="merchant.email" name='email' matInput placeholder="Enter here"
+                            required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" #email="ngModel"
+                            [class.is-invalid]="email.invalid && email.touched">
+                        <div *ngIf="email.errors && (email.invalid && email.touched)">
+                            <small class="text-danger" *ngIf="email.errors.pattern">Enter the valid valid email
+                                id</small>
+                        </div>
+                    </mat-form-field>
+
+                    <!-- password -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>password</mat-label>
+                        <input [(ngModel)]="merchant.password" name="password" type="password" matInput
+                            placeholder="Enter here" required>
+                    </mat-form-field>
+
+                    <div class="container text-center ">
+
+                        <button mat-raised-button color="primary" type="submit"
+                            [disabled]=" MLoginform.form.invalid">Login</button>
+
+                    </div>
+                </form>
+            </mat-card>
+
+
+            <p class="container text-center mt10 btn" style="color:rgb(63, 60, 60);font-weight: 800;">
+                ---------------------------
+                <br>
+                New to Mart ?
+            </p>
+            <div class="container text-center mt10 mr10">
+
+                <!-- <p>Already having an account ?<a class="ml10" style="font-weight:bold"  routerLink="/merchant/login"> Login here</a></p> -->
+                <button tye="submit" mat-raised-button color="accent" class="btn" routerLink="/merchant/register">
+                    Create Your Supplier Account
+                </button>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+</div>

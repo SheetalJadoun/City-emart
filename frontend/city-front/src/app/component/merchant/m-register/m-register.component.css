@@ -1,0 +1,15 @@
+.card{
+    
+        margin-top: 40px !important;
+        margin-right: 10px;
+        width: 450px;
+}
+.form{
+    width: 450px;
+    height: 200px;
+    padding: 50px;
+    margin: 50px;
+}
+.full-width{
+    width: 100%;
+}

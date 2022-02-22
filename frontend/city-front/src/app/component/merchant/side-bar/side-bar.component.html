@@ -1,0 +1,34 @@
+<mat-card>
+    <mat-action-list>
+        <div mat-subheader>
+            Menu
+        </div>
+        <button mat-list-item routerLink="/mdashboard">
+            <mat-icon mat-list-icon mat-fab color="accent">home</mat-icon> Home
+        </button>
+        <button mat-list-item routerLink="/mdashboard/profile">
+            <mat-icon mat-list-icon mat-fab color="accent">account_circle</mat-icon> Profile
+        </button>
+        <!-- <button mat-list-item routerLink="/mdashboard/categories">
+            <mat-icon mat-list-icon mat-fab color="accent">list</mat-icon> Categories
+        </button> -->
+        <button mat-list-item routerLink="/mdashboard/addProducts">
+            <mat-icon mat-list-icon mat-fab color="accent">add_circle_outline</mat-icon> Add Products
+        </button>
+        <button mat-list-item routerLink="/mdashboard/shop">
+            <mat-icon mat-list-icon mat-fab color="accent">store</mat-icon> Shops
+        </button>
+        <button mat-list-item routerLink="/mdashboard/products">
+            <mat-icon mat-list-icon mat-fab color="accent">add_task</mat-icon> Your Products
+        </button>
+        <button mat-list-item routerLink="/mdashboard/your-shop">
+            <mat-icon mat-list-icon mat-fab color="accent">storefront</mat-icon> Your Shop
+        </button>
+        <button mat-list-item routerLink="/mdashboard/wallet">
+            <mat-icon mat-list-icon mat-fab color="accent">account_balance_wallet</mat-icon> Wallet
+        </button>
+        <button mat-list-item (click)="logout()">
+            <mat-icon mat-list-icon mat-fab color="accent">logout</mat-icon> Log out
+        </button>
+    </mat-action-list>
+</mat-card>

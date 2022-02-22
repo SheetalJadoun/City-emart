@@ -1,0 +1,79 @@
+<mat-card>
+    <h1 class="text-center"> Add New Product</h1>
+    <div class="container mt20">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+
+                <form name="Productform" #Productform="ngForm" (ngSubmit)="add()" class="mt20">
+
+                    <!-- name of the product -->
+                    <mat-form-field class="w100 mt20">
+
+                        <mat-label>Name</mat-label>
+                        <input type="text" [(ngModel)]="product.name" name="proname"
+                            placeholder="Enter name of the product" matInput />
+
+                    </mat-form-field>
+
+                    <!-- description -->
+                    <mat-form-field class="w100 mt20" appearance="fill">
+
+                        <mat-label>Description</mat-label>
+                        <textarea type="text" [(ngModel)]="product.description" name="proname"
+                            placeholder="Enter description of the product" matInput rows="5"></textarea>
+
+                    </mat-form-field>
+
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <!-- price of the product -->
+                            <mat-form-field class="w100 mt20">
+
+                                <mat-label>Price</mat-label>
+                                <input type="text" [(ngModel)]="product.price" name="price" placeholder="Enter Price"
+                                    matInput />
+
+                            </mat-form-field>
+
+                        </div>
+                        <div class="col-md-6">
+                            <!-- qty of the product -->
+                            <mat-form-field class="w100 mt20">
+
+                                <mat-label>Quantity</mat-label>
+                                <input type="text" [(ngModel)]="product.qty" name="qty" placeholder="Enter Quantity"
+                                    matInput />
+
+                            </mat-form-field>
+
+                        </div>
+
+                        <!-- categories -->
+                        <mat-form-field class="w100 mt20" appearance="fill">
+
+                            <mat-label>Categories</mat-label>
+                            <mat-select [(ngModel)]="product.category" name="category">
+
+                                <mat-option *ngFor="let c of categories" [value]="c.cid">
+                                    {{c.title}}
+                                </mat-option>
+
+                            </mat-select>
+
+
+                        </mat-form-field>
+
+                        <div class="container text-center">
+                            <button mat-raised-button color="accent" type="submit"
+                                [disabled]=" Productform.form.invalid">Add</button>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</mat-card>

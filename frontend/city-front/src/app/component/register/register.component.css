@@ -1,0 +1,33 @@
+
+.example-spacer
+{
+    flex:1 1 auto
+}
+.logo
+{
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.full-width{
+    width: 100%;
+}
+.container{
+    padding: 20px;
+}
+.mat-card{
+    /* background: radial-gradient(#fff,#b3b1af); */
+   
+}
+/* .bootstrap-wrapper{
+    background: radial-gradient(#fff,#b3b1af);
+} */
+.form{
+    width: fit-content;
+    height: 200px;
+    padding: 50px;
+    margin: 50px;
+}

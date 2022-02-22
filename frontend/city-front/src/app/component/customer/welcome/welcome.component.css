@@ -1,0 +1,23 @@
+
+.w-50 {
+    margin-top: 15%;
+    width: 50%;
+    margin-left: 20%;
+    padding: 1%;
+}
+
+.mat-card{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    color: rgb(20, 19, 20);
+    background-color: rgb(250, 176, 215);
+    font-size: large;
+}
+.mat-card:hover{
+  background-color: rgb(253, 199, 228);
+  color: black;
+}
+.head{
+    text-align: center;
+    font-weight: bold;
+}
